@@ -1,4 +1,4 @@
-# phasetwo_client.model.realm_attribute_representation.RealmAttributeRepresentation
+# phasetwo.model.realm_attribute_representation.RealmAttributeRepresentation
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

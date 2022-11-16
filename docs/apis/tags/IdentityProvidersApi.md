@@ -1,5 +1,5 @@
 <a name="__pageTop"></a>
-# phasetwo_client.apis.tags.identity_providers_api.IdentityProvidersApi
+# phasetwo.apis.tags.identity_providers_api.IdentityProvidersApi
 
 All URIs are relative to *https://app.phasetwo.io/auth/realms*
 
@@ -27,13 +27,13 @@ Add a mapper to identity provider
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import identity_providers_api
-from phasetwo_client.model.identity_provider_mapper_representation import IdentityProviderMapperRepresentation
+import phasetwo
+from phasetwo.apis.tags import identity_providers_api
+from phasetwo.model.identity_provider_mapper_representation import IdentityProviderMapperRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -43,11 +43,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = identity_providers_api.IdentityProvidersApi(api_client)
 
@@ -70,7 +70,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
             body=body,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling IdentityProvidersApi->add_idp_mapper: %s\n" % e)
 ```
 ### Parameters
@@ -152,13 +152,13 @@ Create a new identity provider for this organization
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import identity_providers_api
-from phasetwo_client.model.identity_provider_representation import IdentityProviderRepresentation
+import phasetwo
+from phasetwo.apis.tags import identity_providers_api
+from phasetwo.model.identity_provider_representation import IdentityProviderRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -168,11 +168,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = identity_providers_api.IdentityProvidersApi(api_client)
 
@@ -201,7 +201,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
             body=body,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling IdentityProvidersApi->create_idp: %s\n" % e)
 ```
 ### Parameters
@@ -275,12 +275,12 @@ Delete the identity provider
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import identity_providers_api
+import phasetwo
+from phasetwo.apis.tags import identity_providers_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -290,11 +290,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = identity_providers_api.IdentityProvidersApi(api_client)
 
@@ -309,7 +309,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
         api_response = api_instance.delete_idp(
             path_params=path_params,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling IdentityProvidersApi->delete_idp: %s\n" % e)
 ```
 ### Parameters
@@ -381,12 +381,12 @@ Delete a mapper for the identity provider
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import identity_providers_api
+import phasetwo
+from phasetwo.apis.tags import identity_providers_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -396,11 +396,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = identity_providers_api.IdentityProvidersApi(api_client)
 
@@ -416,7 +416,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
         api_response = api_instance.delete_idp_mapper(
             path_params=path_params,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling IdentityProvidersApi->delete_idp_mapper: %s\n" % e)
 ```
 ### Parameters
@@ -496,13 +496,13 @@ Get identity provider for this organization by alias
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import identity_providers_api
-from phasetwo_client.model.identity_provider_representation import IdentityProviderRepresentation
+import phasetwo
+from phasetwo.apis.tags import identity_providers_api
+from phasetwo.model.identity_provider_representation import IdentityProviderRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -512,11 +512,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = identity_providers_api.IdentityProvidersApi(api_client)
 
@@ -532,7 +532,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
         )
         pprint(api_response)
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling IdentityProvidersApi->get_idp: %s\n" % e)
 ```
 ### Parameters
@@ -611,13 +611,13 @@ Get mapper by id for the identity provider
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import identity_providers_api
-from phasetwo_client.model.identity_provider_mapper_representation import IdentityProviderMapperRepresentation
+import phasetwo
+from phasetwo.apis.tags import identity_providers_api
+from phasetwo.model.identity_provider_mapper_representation import IdentityProviderMapperRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -627,11 +627,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = identity_providers_api.IdentityProvidersApi(api_client)
 
@@ -648,7 +648,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
         )
         pprint(api_response)
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling IdentityProvidersApi->get_idp_mapper: %s\n" % e)
 ```
 ### Parameters
@@ -735,13 +735,13 @@ Get mappers for identity provider
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import identity_providers_api
-from phasetwo_client.model.identity_provider_mapper_representation import IdentityProviderMapperRepresentation
+import phasetwo
+from phasetwo.apis.tags import identity_providers_api
+from phasetwo.model.identity_provider_mapper_representation import IdentityProviderMapperRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -751,11 +751,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = identity_providers_api.IdentityProvidersApi(api_client)
 
@@ -771,7 +771,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
         )
         pprint(api_response)
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling IdentityProvidersApi->get_idp_mappers: %s\n" % e)
 ```
 ### Parameters
@@ -856,13 +856,13 @@ Get identity providers for this organization
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import identity_providers_api
-from phasetwo_client.model.identity_provider_representation import IdentityProviderRepresentation
+import phasetwo
+from phasetwo.apis.tags import identity_providers_api
+from phasetwo.model.identity_provider_representation import IdentityProviderRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -872,11 +872,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = identity_providers_api.IdentityProvidersApi(api_client)
 
@@ -891,7 +891,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
         )
         pprint(api_response)
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling IdentityProvidersApi->get_idps: %s\n" % e)
 ```
 ### Parameters
@@ -968,12 +968,12 @@ Import identity provider from uploaded JSON file
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import identity_providers_api
+import phasetwo
+from phasetwo.apis.tags import identity_providers_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -983,11 +983,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = identity_providers_api.IdentityProvidersApi(api_client)
 
@@ -1002,7 +1002,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
         )
         pprint(api_response)
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling IdentityProvidersApi->import_idp_json: %s\n" % e)
 ```
 ### Parameters
@@ -1079,13 +1079,13 @@ Update identity provider for this organization by alias
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import identity_providers_api
-from phasetwo_client.model.identity_provider_representation import IdentityProviderRepresentation
+import phasetwo
+from phasetwo.apis.tags import identity_providers_api
+from phasetwo.model.identity_provider_representation import IdentityProviderRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -1095,11 +1095,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = identity_providers_api.IdentityProvidersApi(api_client)
 
@@ -1129,7 +1129,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
             body=body,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling IdentityProvidersApi->update_idp: %s\n" % e)
 ```
 ### Parameters
@@ -1211,13 +1211,13 @@ Update a mapper for the identity provider
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import identity_providers_api
-from phasetwo_client.model.identity_provider_mapper_representation import IdentityProviderMapperRepresentation
+import phasetwo
+from phasetwo.apis.tags import identity_providers_api
+from phasetwo.model.identity_provider_mapper_representation import IdentityProviderMapperRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -1227,11 +1227,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = identity_providers_api.IdentityProvidersApi(api_client)
 
@@ -1255,7 +1255,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
             body=body,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling IdentityProvidersApi->update_idp_mapper: %s\n" % e)
 ```
 ### Parameters

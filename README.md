@@ -20,10 +20,10 @@ The Python SDK assumes the use of the [Python Keycloak](https://python-keycloak.
 
 ```python
 import time
-import phasetwo_client
+import phasetwo
 from keycloak import KeycloakAdmin
-from phasetwo_client.apis.tags import attributes_api
-from phasetwo_client.model.realm_attribute_representation import RealmAttributeRepresentation
+from phasetwo.apis.tags import attributes_api
+from phasetwo.model.realm_attribute_representation import RealmAttributeRepresentation
 
 realm = "my-realm"
 
@@ -34,12 +34,12 @@ keycloak_admin = KeycloakAdmin(server_url="https://my-keycloak-host/auth/",
 							   client_id='admin-cli',
                                verify=True)
 
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
     access_token = keycloak_admin.token()
 )
 
-client = phasetwo_client.ApiClient(configuration)
+client = phasetwo.ApiClient(configuration)
 attr_api = attributes_api.AttributesApi(client)
 
 
@@ -47,7 +47,7 @@ attr_api = attributes_api.AttributesApi(client)
 attr = RealmAttributeRepresentation(name="foo", value="bar", realm=realm)
 try:
     attr_api.create_realm_attribute(attr)
-except phasetwo_client.ApiException as e:
+except phasetwo.ApiException as e:
     print("Exception when calling AttributesApi->create_realm_attribute: %s\n" % e)
 
 # Create an Organization
@@ -175,7 +175,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import phasetwo_client
+import phasetwo
 ```
 
 ### Setuptools
@@ -189,7 +189,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import phasetwo_client
+import phasetwo
 ```
 
 ## Getting Started
@@ -199,14 +199,14 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 
 import time
-import phasetwo_client
+import phasetwo
 from pprint import pprint
-from phasetwo_client.apis.tags import attributes_api
-from phasetwo_client.model.keyed_realm_attribute_representation import KeyedRealmAttributeRepresentation
-from phasetwo_client.model.realm_attribute_representation import RealmAttributeRepresentation
+from phasetwo.apis.tags import attributes_api
+from phasetwo.model.keyed_realm_attribute_representation import KeyedRealmAttributeRepresentation
+from phasetwo.model.realm_attribute_representation import RealmAttributeRepresentation
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -216,12 +216,12 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = attributes_api.AttributesApi(api_client)
     realm = "realm_example" # str | realm name (not id!)
@@ -234,7 +234,7 @@ realm_attribute_representation = RealmAttributeRepresentation(
     try:
         # Create a new realm attribute
         api_instance.create_realm_attribute(realmrealm_attribute_representation)
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling AttributesApi->create_realm_attribute: %s\n" % e)
 ```
 
@@ -321,22 +321,22 @@ Class | Method | HTTP request | Description
 - **Type**: Bearer authentication
 
 ## Notes for Large OpenAPI documents
-If the OpenAPI document is large, imports in phasetwo_client.apis and phasetwo_client.models may fail with a
+If the OpenAPI document is large, imports in phasetwo.apis and phasetwo.models may fail with a
 RecursionError indicating the maximum recursion limit has been exceeded. In that case, there are a couple of solutions:
 
 Solution 1:
 Use specific imports for apis and models like:
-- `from phasetwo_client.apis.default_api import DefaultApi`
-- `from phasetwo_client.model.pet import Pet`
+- `from phasetwo.apis.default_api import DefaultApi`
+- `from phasetwo.model.pet import Pet`
 
 Solution 1:
 Before importing the package, adjust the maximum recursion limit as shown below:
 ```
 import sys
 sys.setrecursionlimit(1500)
-import phasetwo_client
-from phasetwo_client.apis import *
-from phasetwo_client.models import *
+import phasetwo
+from phasetwo.apis import *
+from phasetwo.models import *
 ```
 
 ---

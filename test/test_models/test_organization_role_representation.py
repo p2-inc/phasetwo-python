@@ -11,9 +11,9 @@
 
 import unittest
 
-import phasetwo_client
-from phasetwo_client.model.organization_role_representation import OrganizationRoleRepresentation
-from phasetwo_client import configuration
+import phasetwo
+from phasetwo.model.organization_role_representation import OrganizationRoleRepresentation
+from phasetwo import configuration
 
 
 class TestOrganizationRoleRepresentation(unittest.TestCase):

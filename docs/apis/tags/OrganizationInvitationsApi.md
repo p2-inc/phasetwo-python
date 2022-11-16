@@ -1,5 +1,5 @@
 <a name="__pageTop"></a>
-# phasetwo_client.apis.tags.organization_invitations_api.OrganizationInvitationsApi
+# phasetwo.apis.tags.organization_invitations_api.OrganizationInvitationsApi
 
 All URIs are relative to *https://app.phasetwo.io/auth/realms*
 
@@ -19,13 +19,13 @@ Create an invitation to an organization
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import organization_invitations_api
-from phasetwo_client.model.invitation_request_representation import InvitationRequestRepresentation
+import phasetwo
+from phasetwo.apis.tags import organization_invitations_api
+from phasetwo.model.invitation_request_representation import InvitationRequestRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -35,11 +35,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organization_invitations_api.OrganizationInvitationsApi(api_client)
 
@@ -63,7 +63,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
             body=body,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling OrganizationInvitationsApi->add_organization_invitation: %s\n" % e)
 ```
 ### Parameters
@@ -147,13 +147,13 @@ Get a paginated list of invitations to an organization, using an optional search
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import organization_invitations_api
-from phasetwo_client.model.invitation_representation import InvitationRepresentation
+import phasetwo
+from phasetwo.apis.tags import organization_invitations_api
+from phasetwo.model.invitation_representation import InvitationRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -163,11 +163,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organization_invitations_api.OrganizationInvitationsApi(api_client)
 
@@ -185,7 +185,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             query_params=query_params,
         )
         pprint(api_response)
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling OrganizationInvitationsApi->get_organization_invitations: %s\n" % e)
 
     # example passing only optional values
@@ -205,7 +205,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             query_params=query_params,
         )
         pprint(api_response)
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling OrganizationInvitationsApi->get_organization_invitations: %s\n" % e)
 ```
 ### Parameters
@@ -314,12 +314,12 @@ Remove a pending invitation
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import organization_invitations_api
+import phasetwo
+from phasetwo.apis.tags import organization_invitations_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -329,11 +329,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organization_invitations_api.OrganizationInvitationsApi(api_client)
 
@@ -348,7 +348,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
         api_response = api_instance.remove_organization_invitation(
             path_params=path_params,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling OrganizationInvitationsApi->remove_organization_invitation: %s\n" % e)
 ```
 ### Parameters

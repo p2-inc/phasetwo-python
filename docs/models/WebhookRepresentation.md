@@ -1,4 +1,4 @@
-# phasetwo_client.model.webhook_representation.WebhookRepresentation
+# phasetwo.model.webhook_representation.WebhookRepresentation
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

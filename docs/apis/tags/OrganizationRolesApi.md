@@ -1,5 +1,5 @@
 <a name="__pageTop"></a>
-# phasetwo_client.apis.tags.organization_roles_api.OrganizationRolesApi
+# phasetwo.apis.tags.organization_roles_api.OrganizationRolesApi
 
 All URIs are relative to *https://app.phasetwo.io/auth/realms*
 
@@ -25,12 +25,12 @@ Check if a user has an organization role
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import organization_roles_api
+import phasetwo
+from phasetwo.apis.tags import organization_roles_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -40,11 +40,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organization_roles_api.OrganizationRolesApi(api_client)
 
@@ -60,7 +60,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
         api_response = api_instance.check_user_organization_role(
             path_params=path_params,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling OrganizationRolesApi->check_user_organization_role: %s\n" % e)
 ```
 ### Parameters
@@ -140,13 +140,13 @@ Create a new role for this organization
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import organization_roles_api
-from phasetwo_client.model.organization_role_representation import OrganizationRoleRepresentation
+import phasetwo
+from phasetwo.apis.tags import organization_roles_api
+from phasetwo.model.organization_role_representation import OrganizationRoleRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -156,11 +156,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organization_roles_api.OrganizationRolesApi(api_client)
 
@@ -180,7 +180,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
             body=body,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling OrganizationRolesApi->create_organization_role: %s\n" % e)
 ```
 ### Parameters
@@ -254,12 +254,12 @@ Delete this organization role
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import organization_roles_api
+import phasetwo
+from phasetwo.apis.tags import organization_roles_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -269,11 +269,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organization_roles_api.OrganizationRolesApi(api_client)
 
@@ -288,7 +288,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
         api_response = api_instance.delete_organization_role(
             path_params=path_params,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling OrganizationRolesApi->delete_organization_role: %s\n" % e)
 ```
 ### Parameters
@@ -360,13 +360,13 @@ Get role for this organization by name
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import organization_roles_api
-from phasetwo_client.model.organization_role_representation import OrganizationRoleRepresentation
+import phasetwo
+from phasetwo.apis.tags import organization_roles_api
+from phasetwo.model.organization_role_representation import OrganizationRoleRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -376,11 +376,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organization_roles_api.OrganizationRolesApi(api_client)
 
@@ -396,7 +396,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
         )
         pprint(api_response)
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling OrganizationRolesApi->get_organization_role: %s\n" % e)
 ```
 ### Parameters
@@ -475,13 +475,13 @@ Get roles for this organization
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import organization_roles_api
-from phasetwo_client.model.organization_role_representation import OrganizationRoleRepresentation
+import phasetwo
+from phasetwo.apis.tags import organization_roles_api
+from phasetwo.model.organization_role_representation import OrganizationRoleRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -491,11 +491,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organization_roles_api.OrganizationRolesApi(api_client)
 
@@ -510,7 +510,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
         )
         pprint(api_response)
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling OrganizationRolesApi->get_organization_roles: %s\n" % e)
 ```
 ### Parameters
@@ -587,13 +587,13 @@ Get users with this organization role
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import organization_roles_api
-from phasetwo_client.model.user_representation import UserRepresentation
+import phasetwo
+from phasetwo.apis.tags import organization_roles_api
+from phasetwo.model.user_representation import UserRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -603,11 +603,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organization_roles_api.OrganizationRolesApi(api_client)
 
@@ -623,7 +623,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
         )
         pprint(api_response)
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling OrganizationRolesApi->get_user_organization_roles: %s\n" % e)
 ```
 ### Parameters
@@ -710,12 +710,12 @@ Grant the specified user to the specified organization role
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import organization_roles_api
+import phasetwo
+from phasetwo.apis.tags import organization_roles_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -725,11 +725,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organization_roles_api.OrganizationRolesApi(api_client)
 
@@ -745,7 +745,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
         api_response = api_instance.grant_user_organization_role(
             path_params=path_params,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling OrganizationRolesApi->grant_user_organization_role: %s\n" % e)
 ```
 ### Parameters
@@ -827,12 +827,12 @@ Revoke the specified organization role from the specified user
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import organization_roles_api
+import phasetwo
+from phasetwo.apis.tags import organization_roles_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -842,11 +842,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organization_roles_api.OrganizationRolesApi(api_client)
 
@@ -862,7 +862,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
         api_response = api_instance.revoke_user_organization_role(
             path_params=path_params,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling OrganizationRolesApi->revoke_user_organization_role: %s\n" % e)
 ```
 ### Parameters
@@ -942,13 +942,13 @@ Update role for this organization
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import organization_roles_api
-from phasetwo_client.model.organization_role_representation import OrganizationRoleRepresentation
+import phasetwo
+from phasetwo.apis.tags import organization_roles_api
+from phasetwo.model.organization_role_representation import OrganizationRoleRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -958,11 +958,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organization_roles_api.OrganizationRolesApi(api_client)
 
@@ -983,7 +983,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
             body=body,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling OrganizationRolesApi->update_organization_role: %s\n" % e)
 ```
 ### Parameters

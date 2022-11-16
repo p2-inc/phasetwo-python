@@ -1,4 +1,4 @@
-# phasetwo_client.model.identity_provider_representation.IdentityProviderRepresentation
+# phasetwo.model.identity_provider_representation.IdentityProviderRepresentation
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

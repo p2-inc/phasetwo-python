@@ -11,9 +11,9 @@
 
 import unittest
 
-import phasetwo_client
-from phasetwo_client.model.event_representation import EventRepresentation
-from phasetwo_client import configuration
+import phasetwo
+from phasetwo.model.event_representation import EventRepresentation
+from phasetwo import configuration
 
 
 class TestEventRepresentation(unittest.TestCase):

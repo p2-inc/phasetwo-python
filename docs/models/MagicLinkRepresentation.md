@@ -1,4 +1,4 @@
-# phasetwo_client.model.magic_link_representation.MagicLinkRepresentation
+# phasetwo.model.magic_link_representation.MagicLinkRepresentation
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

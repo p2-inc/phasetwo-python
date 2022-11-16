@@ -11,9 +11,9 @@ from unittest.mock import patch
 
 import urllib3
 
-import phasetwo_client
-from phasetwo_client.paths.realm_attributes_attribute_key import put  # noqa: E501
-from phasetwo_client import configuration, schemas, api_client
+import phasetwo
+from phasetwo.paths.realm_attributes_attribute_key import put  # noqa: E501
+from phasetwo import configuration, schemas, api_client
 
 from .. import ApiTestMixin
 

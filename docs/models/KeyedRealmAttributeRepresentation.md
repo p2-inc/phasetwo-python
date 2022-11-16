@@ -1,4 +1,4 @@
-# phasetwo_client.model.keyed_realm_attribute_representation.KeyedRealmAttributeRepresentation
+# phasetwo.model.keyed_realm_attribute_representation.KeyedRealmAttributeRepresentation
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

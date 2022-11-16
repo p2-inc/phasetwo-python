@@ -1,4 +1,4 @@
-# phasetwo_client.model.organization_role_representation.OrganizationRoleRepresentation
+# phasetwo.model.organization_role_representation.OrganizationRoleRepresentation
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

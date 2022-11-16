@@ -11,9 +11,9 @@
 
 import unittest
 
-import phasetwo_client
-from phasetwo_client.model.auth_details_representation import AuthDetailsRepresentation
-from phasetwo_client import configuration
+import phasetwo
+from phasetwo.model.auth_details_representation import AuthDetailsRepresentation
+from phasetwo import configuration
 
 
 class TestAuthDetailsRepresentation(unittest.TestCase):

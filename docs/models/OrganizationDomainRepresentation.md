@@ -1,4 +1,4 @@
-# phasetwo_client.model.organization_domain_representation.OrganizationDomainRepresentation
+# phasetwo.model.organization_domain_representation.OrganizationDomainRepresentation
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

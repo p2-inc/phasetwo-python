@@ -11,9 +11,9 @@
 
 import unittest
 
-import phasetwo_client
-from phasetwo_client.model.invitation_request_representation import InvitationRequestRepresentation
-from phasetwo_client import configuration
+import phasetwo
+from phasetwo.model.invitation_request_representation import InvitationRequestRepresentation
+from phasetwo import configuration
 
 
 class TestInvitationRequestRepresentation(unittest.TestCase):

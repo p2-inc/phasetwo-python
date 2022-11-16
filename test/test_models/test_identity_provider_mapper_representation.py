@@ -11,9 +11,9 @@
 
 import unittest
 
-import phasetwo_client
-from phasetwo_client.model.identity_provider_mapper_representation import IdentityProviderMapperRepresentation
-from phasetwo_client import configuration
+import phasetwo
+from phasetwo.model.identity_provider_mapper_representation import IdentityProviderMapperRepresentation
+from phasetwo import configuration
 
 
 class TestIdentityProviderMapperRepresentation(unittest.TestCase):

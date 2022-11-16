@@ -1,4 +1,4 @@
-# phasetwo_client.model.event_representation.EventRepresentation
+# phasetwo.model.event_representation.EventRepresentation
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

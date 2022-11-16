@@ -1,5 +1,5 @@
 <a name="__pageTop"></a>
-# phasetwo_client.apis.tags.events_api.EventsApi
+# phasetwo.apis.tags.events_api.EventsApi
 
 All URIs are relative to *https://app.phasetwo.io/auth/realms*
 
@@ -22,13 +22,13 @@ Create a new audit log event
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import events_api
-from phasetwo_client.model.event_representation import EventRepresentation
+import phasetwo
+from phasetwo.apis.tags import events_api
+from phasetwo.model.event_representation import EventRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -38,11 +38,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = events_api.EventsApi(api_client)
 
@@ -77,7 +77,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
             body=body,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling EventsApi->create_event: %s\n" % e)
 ```
 ### Parameters
@@ -167,13 +167,13 @@ Create a new webhook
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import events_api
-from phasetwo_client.model.webhook_representation import WebhookRepresentation
+import phasetwo
+from phasetwo.apis.tags import events_api
+from phasetwo.model.webhook_representation import WebhookRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -183,11 +183,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = events_api.EventsApi(api_client)
 
@@ -214,7 +214,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
             body=body,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling EventsApi->create_webhook: %s\n" % e)
 ```
 ### Parameters
@@ -288,12 +288,12 @@ Delete the webhook
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import events_api
+import phasetwo
+from phasetwo.apis.tags import events_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -303,11 +303,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = events_api.EventsApi(api_client)
 
@@ -321,7 +321,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
         api_response = api_instance.delete_webhook(
             path_params=path_params,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling EventsApi->delete_webhook: %s\n" % e)
 ```
 ### Parameters
@@ -393,13 +393,13 @@ Get webhook by id
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import events_api
-from phasetwo_client.model.webhook_representation import WebhookRepresentation
+import phasetwo
+from phasetwo.apis.tags import events_api
+from phasetwo.model.webhook_representation import WebhookRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -409,11 +409,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = events_api.EventsApi(api_client)
 
@@ -428,7 +428,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
         )
         pprint(api_response)
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling EventsApi->get_webhook_by_id: %s\n" % e)
 ```
 ### Parameters
@@ -509,13 +509,13 @@ Get a list of webhooks for this realm
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import events_api
-from phasetwo_client.model.webhook_representation import WebhookRepresentation
+import phasetwo
+from phasetwo.apis.tags import events_api
+from phasetwo.model.webhook_representation import WebhookRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -525,11 +525,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = events_api.EventsApi(api_client)
 
@@ -543,7 +543,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
         )
         pprint(api_response)
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling EventsApi->get_webhooks: %s\n" % e)
 ```
 ### Parameters
@@ -612,13 +612,13 @@ Update this webhook by id
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import events_api
-from phasetwo_client.model.webhook_representation import WebhookRepresentation
+import phasetwo
+from phasetwo.apis.tags import events_api
+from phasetwo.model.webhook_representation import WebhookRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -628,11 +628,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = events_api.EventsApi(api_client)
 
@@ -660,7 +660,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
             body=body,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling EventsApi->update_webhook: %s\n" % e)
 ```
 ### Parameters

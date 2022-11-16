@@ -1,4 +1,4 @@
-# phasetwo_client.model.portal_link_representation.PortalLinkRepresentation
+# phasetwo.model.portal_link_representation.PortalLinkRepresentation
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

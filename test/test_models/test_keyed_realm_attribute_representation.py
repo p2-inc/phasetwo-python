@@ -11,9 +11,9 @@
 
 import unittest
 
-import phasetwo_client
-from phasetwo_client.model.keyed_realm_attribute_representation import KeyedRealmAttributeRepresentation
-from phasetwo_client import configuration
+import phasetwo
+from phasetwo.model.keyed_realm_attribute_representation import KeyedRealmAttributeRepresentation
+from phasetwo import configuration
 
 
 class TestKeyedRealmAttributeRepresentation(unittest.TestCase):

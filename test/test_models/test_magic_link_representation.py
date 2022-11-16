@@ -11,9 +11,9 @@
 
 import unittest
 
-import phasetwo_client
-from phasetwo_client.model.magic_link_representation import MagicLinkRepresentation
-from phasetwo_client import configuration
+import phasetwo
+from phasetwo.model.magic_link_representation import MagicLinkRepresentation
+from phasetwo import configuration
 
 
 class TestMagicLinkRepresentation(unittest.TestCase):

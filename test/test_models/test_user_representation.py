@@ -11,9 +11,9 @@
 
 import unittest
 
-import phasetwo_client
-from phasetwo_client.model.user_representation import UserRepresentation
-from phasetwo_client import configuration
+import phasetwo
+from phasetwo.model.user_representation import UserRepresentation
+from phasetwo import configuration
 
 
 class TestUserRepresentation(unittest.TestCase):

@@ -11,9 +11,9 @@
 
 import unittest
 
-import phasetwo_client
-from phasetwo_client.model.portal_link_representation import PortalLinkRepresentation
-from phasetwo_client import configuration
+import phasetwo
+from phasetwo.model.portal_link_representation import PortalLinkRepresentation
+from phasetwo import configuration
 
 
 class TestPortalLinkRepresentation(unittest.TestCase):

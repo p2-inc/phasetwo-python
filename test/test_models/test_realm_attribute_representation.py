@@ -11,9 +11,9 @@
 
 import unittest
 
-import phasetwo_client
-from phasetwo_client.model.realm_attribute_representation import RealmAttributeRepresentation
-from phasetwo_client import configuration
+import phasetwo
+from phasetwo.model.realm_attribute_representation import RealmAttributeRepresentation
+from phasetwo import configuration
 
 
 class TestRealmAttributeRepresentation(unittest.TestCase):

@@ -1,4 +1,4 @@
-# phasetwo_client.model.invitation_representation.InvitationRepresentation
+# phasetwo.model.invitation_representation.InvitationRepresentation
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

@@ -1,5 +1,5 @@
 <a name="__pageTop"></a>
-# phasetwo_client.apis.tags.organization_domains_api.OrganizationDomainsApi
+# phasetwo.apis.tags.organization_domains_api.OrganizationDomainsApi
 
 All URIs are relative to *https://app.phasetwo.io/auth/realms*
 
@@ -19,13 +19,13 @@ Get details for a domain owned by an organization
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import organization_domains_api
-from phasetwo_client.model.organization_domain_representation import OrganizationDomainRepresentation
+import phasetwo
+from phasetwo.apis.tags import organization_domains_api
+from phasetwo.model.organization_domain_representation import OrganizationDomainRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -35,11 +35,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organization_domains_api.OrganizationDomainsApi(api_client)
 
@@ -55,7 +55,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
         )
         pprint(api_response)
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling OrganizationDomainsApi->get_organization_domain: %s\n" % e)
 ```
 ### Parameters
@@ -134,13 +134,13 @@ Get details for all domains owned by an organization
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import organization_domains_api
-from phasetwo_client.model.organization_domain_representation import OrganizationDomainRepresentation
+import phasetwo
+from phasetwo.apis.tags import organization_domains_api
+from phasetwo.model.organization_domain_representation import OrganizationDomainRepresentation
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -150,11 +150,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organization_domains_api.OrganizationDomainsApi(api_client)
 
@@ -169,7 +169,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
             path_params=path_params,
         )
         pprint(api_response)
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling OrganizationDomainsApi->get_organization_domains: %s\n" % e)
 ```
 ### Parameters
@@ -248,12 +248,12 @@ Initiate a verification check for the domain name owned by this organization
 
 * Bearer Authentication (access_token):
 ```python
-import phasetwo_client
-from phasetwo_client.apis.tags import organization_domains_api
+import phasetwo
+from phasetwo.apis.tags import organization_domains_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
 # See configuration.py for a list of all supported configuration parameters.
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     host = "https://app.phasetwo.io/auth/realms"
 )
 
@@ -263,11 +263,11 @@ configuration = phasetwo_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = phasetwo_client.Configuration(
+configuration = phasetwo.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 # Enter a context with an instance of the API client
-with phasetwo_client.ApiClient(configuration) as api_client:
+with phasetwo.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organization_domains_api.OrganizationDomainsApi(api_client)
 
@@ -282,7 +282,7 @@ with phasetwo_client.ApiClient(configuration) as api_client:
         api_response = api_instance.verify_domain(
             path_params=path_params,
         )
-    except phasetwo_client.ApiException as e:
+    except phasetwo.ApiException as e:
         print("Exception when calling OrganizationDomainsApi->verify_domain: %s\n" % e)
 ```
 ### Parameters

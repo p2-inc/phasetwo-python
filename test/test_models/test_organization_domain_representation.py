@@ -11,9 +11,9 @@
 
 import unittest
 
-import phasetwo_client
-from phasetwo_client.model.organization_domain_representation import OrganizationDomainRepresentation
-from phasetwo_client import configuration
+import phasetwo
+from phasetwo.model.organization_domain_representation import OrganizationDomainRepresentation
+from phasetwo import configuration
 
 
 class TestOrganizationDomainRepresentation(unittest.TestCase):

@@ -1,4 +1,4 @@
-# phasetwo_client.model.auth_details_representation.AuthDetailsRepresentation
+# phasetwo.model.auth_details_representation.AuthDetailsRepresentation
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

@@ -1,4 +1,4 @@
-# phasetwo_client.model.user_representation.UserRepresentation
+# phasetwo.model.user_representation.UserRepresentation
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
