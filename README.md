@@ -31,7 +31,7 @@ keycloak_admin = KeycloakAdmin(server_url="https://my-keycloak-host/auth/",
                                username='admin',
                                password='password',
                                realm_name=realm,
-							   client_id='admin-cli',
+                               client_id='admin-cli',
                                verify=True)
 
 configuration = phasetwo.Configuration(
@@ -40,10 +40,9 @@ configuration = phasetwo.Configuration(
 )
 
 client = phasetwo.ApiClient(configuration)
-attr_api = attributes_api.AttributesApi(client)
-
 
 # Create a new realm attribute
+attr_api = attributes_api.AttributesApi(client)
 attr = RealmAttributeRepresentation(name="foo", value="bar", realm=realm)
 try:
     attr_api.create_realm_attribute(attr)
