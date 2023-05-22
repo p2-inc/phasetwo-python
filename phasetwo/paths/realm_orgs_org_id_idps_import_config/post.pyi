@@ -61,7 +61,7 @@ request_path_org_id = api_client.PathParameter(
 )
 
 
-class SchemaFor2XXResponseBodyApplicationJson(
+class SchemaFor200ResponseBodyApplicationJson(
     schemas.DictSchema
 ):
 
@@ -81,7 +81,7 @@ class SchemaFor2XXResponseBodyApplicationJson(
         *_args: typing.Union[dict, frozendict.frozendict, ],
         _configuration: typing.Optional[schemas.Configuration] = None,
         **kwargs: typing.Union[MetaOapg.additional_properties, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
-    ) -> 'SchemaFor2XXResponseBodyApplicationJson':
+    ) -> 'SchemaFor200ResponseBodyApplicationJson':
         return super().__new__(
             cls,
             *_args,
@@ -91,19 +91,19 @@ class SchemaFor2XXResponseBodyApplicationJson(
 
 
 @dataclass
-class ApiResponseFor2XX(api_client.ApiResponse):
+class ApiResponseFor200(api_client.ApiResponse):
     response: urllib3.HTTPResponse
     body: typing.Union[
-        SchemaFor2XXResponseBodyApplicationJson,
+        SchemaFor200ResponseBodyApplicationJson,
     ]
     headers: schemas.Unset = schemas.unset
 
 
-_response_for_2XX = api_client.OpenApiResponse(
-    response_cls=ApiResponseFor2XX,
+_response_for_200 = api_client.OpenApiResponse(
+    response_cls=ApiResponseFor200,
     content={
         'application/json': api_client.MediaType(
-            schema=SchemaFor2XXResponseBodyApplicationJson),
+            schema=SchemaFor200ResponseBodyApplicationJson),
     },
 )
 _all_accept_content_types = (
@@ -121,7 +121,7 @@ class BaseApi(api_client.Api):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: typing_extensions.Literal[False] = ...,
     ) -> typing.Union[
-        ApiResponseFor2XX,
+        ApiResponseFor200,
     ]: ...
 
     @typing.overload
@@ -143,7 +143,7 @@ class BaseApi(api_client.Api):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = ...,
     ) -> typing.Union[
-        ApiResponseFor2XX,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
@@ -203,7 +203,11 @@ class BaseApi(api_client.Api):
                 api_response = api_client.ApiResponseWithoutDeserialization(response=response)
 
         if not 200 <= response.status <= 299:
-            raise exceptions.ApiException(api_response=api_response)
+            raise exceptions.ApiException(
+                status=response.status,
+                reason=response.reason,
+                api_response=api_response
+            )
 
         return api_response
 
@@ -220,7 +224,7 @@ class ImportIdpJson(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: typing_extensions.Literal[False] = ...,
     ) -> typing.Union[
-        ApiResponseFor2XX,
+        ApiResponseFor200,
     ]: ...
 
     @typing.overload
@@ -242,7 +246,7 @@ class ImportIdpJson(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = ...,
     ) -> typing.Union[
-        ApiResponseFor2XX,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
@@ -275,7 +279,7 @@ class ApiForpost(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: typing_extensions.Literal[False] = ...,
     ) -> typing.Union[
-        ApiResponseFor2XX,
+        ApiResponseFor200,
     ]: ...
 
     @typing.overload
@@ -297,7 +301,7 @@ class ApiForpost(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = ...,
     ) -> typing.Union[
-        ApiResponseFor2XX,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 

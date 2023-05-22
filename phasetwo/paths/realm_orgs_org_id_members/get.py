@@ -30,6 +30,7 @@ from phasetwo.model.user_representation import UserRepresentation
 from . import path
 
 # Query params
+SearchSchema = schemas.StrSchema
 FirstSchema = schemas.Int32Schema
 MaxSchema = schemas.Int32Schema
 RequestRequiredQueryParams = typing_extensions.TypedDict(
@@ -40,6 +41,7 @@ RequestRequiredQueryParams = typing_extensions.TypedDict(
 RequestOptionalQueryParams = typing_extensions.TypedDict(
     'RequestOptionalQueryParams',
     {
+        'search': typing.Union[SearchSchema, str, ],
         'first': typing.Union[FirstSchema, decimal.Decimal, int, ],
         'max': typing.Union[MaxSchema, decimal.Decimal, int, ],
     },
@@ -51,6 +53,12 @@ class RequestQueryParams(RequestRequiredQueryParams, RequestOptionalQueryParams)
     pass
 
 
+request_query_search = api_client.QueryParameter(
+    name="search",
+    style=api_client.ParameterStyle.FORM,
+    schema=SearchSchema,
+    explode=True,
+)
 request_query_first = api_client.QueryParameter(
     name="first",
     style=api_client.ParameterStyle.FORM,
@@ -226,6 +234,7 @@ class BaseApi(api_client.Api):
 
         prefix_separator_iterator = None
         for parameter in (
+            request_query_search,
             request_query_first,
             request_query_max,
         ):
@@ -263,7 +272,11 @@ class BaseApi(api_client.Api):
                 api_response = api_client.ApiResponseWithoutDeserialization(response=response)
 
         if not 200 <= response.status <= 299:
-            raise exceptions.ApiException(api_response=api_response)
+            raise exceptions.ApiException(
+                status=response.status,
+                reason=response.reason,
+                api_response=api_response
+            )
 
         return api_response
 

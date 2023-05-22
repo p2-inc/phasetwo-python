@@ -7,9 +7,12 @@ import enum
 
 class PathValues(str, enum.Enum):
     REALM_ORGS = "/{realm}/orgs"
+    REALM_ORGS_COUNT = "/{realm}/orgs/count"
+    REALM_ORGS_ME = "/{realm}/orgs/me"
     REALM_ORGS_ORG_ID = "/{realm}/orgs/{orgId}"
     REALM_ORGS_ORG_ID_PORTALLINK = "/{realm}/orgs/{orgId}/portal-link"
     REALM_ORGS_ORG_ID_MEMBERS = "/{realm}/orgs/{orgId}/members"
+    REALM_ORGS_ORG_ID_MEMBERS_COUNT = "/{realm}/orgs/{orgId}/members/count"
     REALM_ORGS_ORG_ID_DOMAINS = "/{realm}/orgs/{orgId}/domains"
     REALM_ORGS_ORG_ID_DOMAINS_DOMAIN_NAME = "/{realm}/orgs/{orgId}/domains/{domainName}"
     REALM_ORGS_ORG_ID_DOMAINS_DOMAIN_NAME_VERIFY = "/{realm}/orgs/{orgId}/domains/{domainName}/verify"

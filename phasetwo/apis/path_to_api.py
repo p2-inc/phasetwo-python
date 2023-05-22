@@ -2,9 +2,12 @@ import typing_extensions
 
 from phasetwo.paths import PathValues
 from phasetwo.apis.paths.realm_orgs import RealmOrgs
+from phasetwo.apis.paths.realm_orgs_count import RealmOrgsCount
+from phasetwo.apis.paths.realm_orgs_me import RealmOrgsMe
 from phasetwo.apis.paths.realm_orgs_org_id import RealmOrgsOrgId
 from phasetwo.apis.paths.realm_orgs_org_id_portal_link import RealmOrgsOrgIdPortalLink
 from phasetwo.apis.paths.realm_orgs_org_id_members import RealmOrgsOrgIdMembers
+from phasetwo.apis.paths.realm_orgs_org_id_members_count import RealmOrgsOrgIdMembersCount
 from phasetwo.apis.paths.realm_orgs_org_id_domains import RealmOrgsOrgIdDomains
 from phasetwo.apis.paths.realm_orgs_org_id_domains_domain_name import RealmOrgsOrgIdDomainsDomainName
 from phasetwo.apis.paths.realm_orgs_org_id_domains_domain_name_verify import RealmOrgsOrgIdDomainsDomainNameVerify
@@ -33,9 +36,12 @@ PathToApi = typing_extensions.TypedDict(
     'PathToApi',
     {
         PathValues.REALM_ORGS: RealmOrgs,
+        PathValues.REALM_ORGS_COUNT: RealmOrgsCount,
+        PathValues.REALM_ORGS_ME: RealmOrgsMe,
         PathValues.REALM_ORGS_ORG_ID: RealmOrgsOrgId,
         PathValues.REALM_ORGS_ORG_ID_PORTALLINK: RealmOrgsOrgIdPortalLink,
         PathValues.REALM_ORGS_ORG_ID_MEMBERS: RealmOrgsOrgIdMembers,
+        PathValues.REALM_ORGS_ORG_ID_MEMBERS_COUNT: RealmOrgsOrgIdMembersCount,
         PathValues.REALM_ORGS_ORG_ID_DOMAINS: RealmOrgsOrgIdDomains,
         PathValues.REALM_ORGS_ORG_ID_DOMAINS_DOMAIN_NAME: RealmOrgsOrgIdDomainsDomainName,
         PathValues.REALM_ORGS_ORG_ID_DOMAINS_DOMAIN_NAME_VERIFY: RealmOrgsOrgIdDomainsDomainNameVerify,
@@ -65,9 +71,12 @@ PathToApi = typing_extensions.TypedDict(
 path_to_api = PathToApi(
     {
         PathValues.REALM_ORGS: RealmOrgs,
+        PathValues.REALM_ORGS_COUNT: RealmOrgsCount,
+        PathValues.REALM_ORGS_ME: RealmOrgsMe,
         PathValues.REALM_ORGS_ORG_ID: RealmOrgsOrgId,
         PathValues.REALM_ORGS_ORG_ID_PORTALLINK: RealmOrgsOrgIdPortalLink,
         PathValues.REALM_ORGS_ORG_ID_MEMBERS: RealmOrgsOrgIdMembers,
+        PathValues.REALM_ORGS_ORG_ID_MEMBERS_COUNT: RealmOrgsOrgIdMembersCount,
         PathValues.REALM_ORGS_ORG_ID_DOMAINS: RealmOrgsOrgIdDomains,
         PathValues.REALM_ORGS_ORG_ID_DOMAINS_DOMAIN_NAME: RealmOrgsOrgIdDomainsDomainName,
         PathValues.REALM_ORGS_ORG_ID_DOMAINS_DOMAIN_NAME_VERIFY: RealmOrgsOrgIdDomainsDomainNameVerify,
