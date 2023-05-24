@@ -82,7 +82,7 @@ class Configuration(object):
     _default = None
 
     def __init__(
-        self,
+        self, access_token=None,
         host=None,
         discard_unknown_keys=False,
         disabled_client_side_validations="",
@@ -93,6 +93,7 @@ class Configuration(object):
     ):
         """Constructor
         """
+        self.access_token = access_token
         self._base_path = "https://app.phasetwo.io/auth/realms" if host is None else host
         """Default Base url
         """
