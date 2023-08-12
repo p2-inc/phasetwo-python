@@ -82,7 +82,7 @@ class Configuration(object):
     _default = None
 
     def __init__(
-        self, access_token=None,
+        self,
         host=None,
         discard_unknown_keys=False,
         disabled_client_side_validations="",
@@ -93,8 +93,7 @@ class Configuration(object):
     ):
         """Constructor
         """
-        self.access_token = access_token
-        self._base_path = "https://app.phasetwo.io/auth/realms" if host is None else host
+        self._base_path = "https://app.phasetwo.io/realms" if host is None else host
         """Default Base url
         """
         self.server_index = 0 if server_index is None and host is None else server_index
@@ -375,7 +374,7 @@ class Configuration(object):
         """
         return [
             {
-                'url': "{protocol}://{host}{port}/auth/realms",
+                'url': "{protocol}://{host}{port}{relativePath}/realms",
                 'description': "No description provided",
                 'variables': {
                     'host': {
@@ -392,6 +391,14 @@ class Configuration(object):
                         'enum_values': [
                             "",
                             "8081"
+                        ]
+                        },
+                    'relativePath': {
+                        'description': "Relative path",
+                        'default_value': "",
+                        'enum_values': [
+                            "",
+                            "/auth"
                         ]
                         },
                     'protocol': {

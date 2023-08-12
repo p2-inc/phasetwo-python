@@ -1,15 +1,17 @@
 <a name="__pageTop"></a>
 # phasetwo.apis.tags.organizations_api.OrganizationsApi
 
-All URIs are relative to *https://app.phasetwo.io/auth/realms*
+All URIs are relative to *https://app.phasetwo.io/realms*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_organization**](#create_organization) | **post** /{realm}/orgs | Create a new organization
 [**create_portal_link**](#create_portal_link) | **post** /{realm}/orgs/{orgId}/portal-link | Create a link for the organization&#x27;s admin portal
 [**delete_organization**](#delete_organization) | **delete** /{realm}/orgs/{orgId} | Delete the organization
+[**get_me**](#get_me) | **get** /{realm}/orgs/me | Get orgs and roles for authenticated user
 [**get_organization_by_id**](#get_organization_by_id) | **get** /{realm}/orgs/{orgId} | Get organization by id
 [**get_organizations**](#get_organizations) | **get** /{realm}/orgs | Get organizations
+[**get_organizations_count**](#get_organizations_count) | **get** /{realm}/orgs/count | Get organizations count
 [**update_organization**](#update_organization) | **put** /{realm}/orgs/{orgId} | Update this organization by id
 
 # **create_organization**
@@ -26,10 +28,10 @@ import phasetwo
 from phasetwo.apis.tags import organizations_api
 from phasetwo.model.organization_representation import OrganizationRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -156,10 +158,10 @@ import phasetwo
 from phasetwo.apis.tags import organizations_api
 from phasetwo.model.portal_link_representation import PortalLinkRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -296,10 +298,10 @@ Delete the organization
 import phasetwo
 from phasetwo.apis.tags import organizations_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -380,6 +382,105 @@ headers | Unset | headers were not defined |
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
+# **get_me**
+<a name="get_me"></a>
+> MyOrganizationsRepresentation get_me(realm)
+
+Get orgs and roles for authenticated user
+
+Get a list of all organizations that the user is a member and their roles in those organizations. Similar idea to /userinfo in OIDC.
+
+### Example
+
+* Bearer Authentication (access_token):
+```python
+import phasetwo
+from phasetwo.apis.tags import organizations_api
+from phasetwo.model.my_organizations_representation import MyOrganizationsRepresentation
+from pprint import pprint
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
+# See configuration.py for a list of all supported configuration parameters.
+configuration = phasetwo.Configuration(
+    host = "https://app.phasetwo.io/realms"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization: access_token
+configuration = phasetwo.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+# Enter a context with an instance of the API client
+with phasetwo.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = organizations_api.OrganizationsApi(api_client)
+
+    # example passing only required values which don't have defaults set
+    path_params = {
+        'realm': "realm_example",
+    }
+    try:
+        # Get orgs and roles for authenticated user
+        api_response = api_instance.get_me(
+            path_params=path_params,
+        )
+        pprint(api_response)
+    except phasetwo.ApiException as e:
+        print("Exception when calling OrganizationsApi->get_me: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+path_params | RequestPathParams | |
+accept_content_types | typing.Tuple[str] | default is ('application/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### path_params
+#### RequestPathParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+realm | RealmSchema | | 
+
+# RealmSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#get_me.ApiResponseFor200) | success
+
+#### get_me.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyApplicationJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**MyOrganizationsRepresentation**](../../models/MyOrganizationsRepresentation.md) |  | 
+
+
+### Authorization
+
+[access_token](../../../README.md#access_token)
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
 # **get_organization_by_id**
 <a name="get_organization_by_id"></a>
 > OrganizationRepresentation get_organization_by_id(realmorg_id)
@@ -394,10 +495,10 @@ import phasetwo
 from phasetwo.apis.tags import organizations_api
 from phasetwo.model.organization_representation import OrganizationRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -492,7 +593,7 @@ Type | Description  | Notes
 
 Get organizations
 
-Get a paginated list of organizations using an optional search query.
+Get a paginated list of organizations using optional search query parameters.
 
 ### Example
 
@@ -502,10 +603,10 @@ import phasetwo
 from phasetwo.apis.tags import organizations_api
 from phasetwo.model.organization_representation import OrganizationRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -546,6 +647,7 @@ with phasetwo.ApiClient(configuration) as api_client:
         'search': "search_example",
         'first': 1,
         'max': 1,
+        'q': "q_example",
     }
     try:
         # Get organizations
@@ -576,6 +678,7 @@ Name | Type | Description  | Notes
 search | SearchSchema | | optional
 first | FirstSchema | | optional
 max | MaxSchema | | optional
+q | QSchema | | optional
 
 
 # SearchSchema
@@ -598,6 +701,13 @@ decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 32 bit integer
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 32 bit integer
+
+# QSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
 
 ### path_params
 #### RequestPathParams
@@ -645,6 +755,141 @@ Class Name | Input Type | Accessed Type | Description | Notes
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
+# **get_organizations_count**
+<a name="get_organizations_count"></a>
+> int get_organizations_count(realm)
+
+Get organizations count
+
+Get a count of organizations using an optional search query.
+
+### Example
+
+* Bearer Authentication (access_token):
+```python
+import phasetwo
+from phasetwo.apis.tags import organizations_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
+# See configuration.py for a list of all supported configuration parameters.
+configuration = phasetwo.Configuration(
+    host = "https://app.phasetwo.io/realms"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization: access_token
+configuration = phasetwo.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+# Enter a context with an instance of the API client
+with phasetwo.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = organizations_api.OrganizationsApi(api_client)
+
+    # example passing only required values which don't have defaults set
+    path_params = {
+        'realm': "realm_example",
+    }
+    query_params = {
+    }
+    try:
+        # Get organizations count
+        api_response = api_instance.get_organizations_count(
+            path_params=path_params,
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except phasetwo.ApiException as e:
+        print("Exception when calling OrganizationsApi->get_organizations_count: %s\n" % e)
+
+    # example passing only optional values
+    path_params = {
+        'realm': "realm_example",
+    }
+    query_params = {
+        'search': "search_example",
+    }
+    try:
+        # Get organizations count
+        api_response = api_instance.get_organizations_count(
+            path_params=path_params,
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except phasetwo.ApiException as e:
+        print("Exception when calling OrganizationsApi->get_organizations_count: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+path_params | RequestPathParams | |
+accept_content_types | typing.Tuple[str] | default is ('application/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+search | SearchSchema | | optional
+
+
+# SearchSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### path_params
+#### RequestPathParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+realm | RealmSchema | | 
+
+# RealmSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#get_organizations_count.ApiResponseFor200) | success
+
+#### get_organizations_count.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyApplicationJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 32 bit integer
+
+### Authorization
+
+[access_token](../../../README.md#access_token)
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
 # **update_organization**
 <a name="update_organization"></a>
 > update_organization(realmorg_idorganization_representation)
@@ -659,10 +904,10 @@ import phasetwo
 from phasetwo.apis.tags import organizations_api
 from phasetwo.model.organization_representation import OrganizationRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters

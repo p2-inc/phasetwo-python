@@ -41,12 +41,12 @@ class WebhookRepresentation(
             enabled = schemas.BoolSchema
             url = schemas.StrSchema
             secret = schemas.StrSchema
-            created_by = schemas.StrSchema
-            created_at = schemas.StrSchema
+            createdBy = schemas.StrSchema
+            createdAt = schemas.StrSchema
             realm = schemas.StrSchema
             
             
-            class event_types(
+            class eventTypes(
                 schemas.ListSchema
             ):
             
@@ -58,7 +58,7 @@ class WebhookRepresentation(
                     cls,
                     _arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
                     _configuration: typing.Optional[schemas.Configuration] = None,
-                ) -> 'event_types':
+                ) -> 'eventTypes':
                     return super().__new__(
                         cls,
                         _arg,
@@ -73,10 +73,10 @@ class WebhookRepresentation(
                 "enabled": enabled,
                 "url": url,
                 "secret": secret,
-                "created_by": created_by,
-                "created_at": created_at,
+                "createdBy": createdBy,
+                "createdAt": createdAt,
                 "realm": realm,
-                "event_types": event_types,
+                "eventTypes": eventTypes,
             }
     
     @typing.overload
@@ -95,21 +95,21 @@ class WebhookRepresentation(
     def __getitem__(self, name: typing_extensions.Literal["secret"]) -> MetaOapg.properties.secret: ...
     
     @typing.overload
-    def __getitem__(self, name: typing_extensions.Literal["created_by"]) -> MetaOapg.properties.created_by: ...
+    def __getitem__(self, name: typing_extensions.Literal["createdBy"]) -> MetaOapg.properties.createdBy: ...
     
     @typing.overload
-    def __getitem__(self, name: typing_extensions.Literal["created_at"]) -> MetaOapg.properties.created_at: ...
+    def __getitem__(self, name: typing_extensions.Literal["createdAt"]) -> MetaOapg.properties.createdAt: ...
     
     @typing.overload
     def __getitem__(self, name: typing_extensions.Literal["realm"]) -> MetaOapg.properties.realm: ...
     
     @typing.overload
-    def __getitem__(self, name: typing_extensions.Literal["event_types"]) -> MetaOapg.properties.event_types: ...
+    def __getitem__(self, name: typing_extensions.Literal["eventTypes"]) -> MetaOapg.properties.eventTypes: ...
     
     @typing.overload
     def __getitem__(self, name: str) -> schemas.UnsetAnyTypeSchema: ...
     
-    def __getitem__(self, name: typing.Union[typing_extensions.Literal["attributes", "id", "enabled", "url", "secret", "created_by", "created_at", "realm", "event_types", ], str]):
+    def __getitem__(self, name: typing.Union[typing_extensions.Literal["attributes", "id", "enabled", "url", "secret", "createdBy", "createdAt", "realm", "eventTypes", ], str]):
         # dict_instance[name] accessor
         return super().__getitem__(name)
     
@@ -130,21 +130,21 @@ class WebhookRepresentation(
     def get_item_oapg(self, name: typing_extensions.Literal["secret"]) -> typing.Union[MetaOapg.properties.secret, schemas.Unset]: ...
     
     @typing.overload
-    def get_item_oapg(self, name: typing_extensions.Literal["created_by"]) -> typing.Union[MetaOapg.properties.created_by, schemas.Unset]: ...
+    def get_item_oapg(self, name: typing_extensions.Literal["createdBy"]) -> typing.Union[MetaOapg.properties.createdBy, schemas.Unset]: ...
     
     @typing.overload
-    def get_item_oapg(self, name: typing_extensions.Literal["created_at"]) -> typing.Union[MetaOapg.properties.created_at, schemas.Unset]: ...
+    def get_item_oapg(self, name: typing_extensions.Literal["createdAt"]) -> typing.Union[MetaOapg.properties.createdAt, schemas.Unset]: ...
     
     @typing.overload
     def get_item_oapg(self, name: typing_extensions.Literal["realm"]) -> typing.Union[MetaOapg.properties.realm, schemas.Unset]: ...
     
     @typing.overload
-    def get_item_oapg(self, name: typing_extensions.Literal["event_types"]) -> typing.Union[MetaOapg.properties.event_types, schemas.Unset]: ...
+    def get_item_oapg(self, name: typing_extensions.Literal["eventTypes"]) -> typing.Union[MetaOapg.properties.eventTypes, schemas.Unset]: ...
     
     @typing.overload
     def get_item_oapg(self, name: str) -> typing.Union[schemas.UnsetAnyTypeSchema, schemas.Unset]: ...
     
-    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["attributes", "id", "enabled", "url", "secret", "created_by", "created_at", "realm", "event_types", ], str]):
+    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["attributes", "id", "enabled", "url", "secret", "createdBy", "createdAt", "realm", "eventTypes", ], str]):
         return super().get_item_oapg(name)
     
 
@@ -156,10 +156,10 @@ class WebhookRepresentation(
         enabled: typing.Union[MetaOapg.properties.enabled, bool, schemas.Unset] = schemas.unset,
         url: typing.Union[MetaOapg.properties.url, str, schemas.Unset] = schemas.unset,
         secret: typing.Union[MetaOapg.properties.secret, str, schemas.Unset] = schemas.unset,
-        created_by: typing.Union[MetaOapg.properties.created_by, str, schemas.Unset] = schemas.unset,
-        created_at: typing.Union[MetaOapg.properties.created_at, str, schemas.Unset] = schemas.unset,
+        createdBy: typing.Union[MetaOapg.properties.createdBy, str, schemas.Unset] = schemas.unset,
+        createdAt: typing.Union[MetaOapg.properties.createdAt, str, schemas.Unset] = schemas.unset,
         realm: typing.Union[MetaOapg.properties.realm, str, schemas.Unset] = schemas.unset,
-        event_types: typing.Union[MetaOapg.properties.event_types, list, tuple, schemas.Unset] = schemas.unset,
+        eventTypes: typing.Union[MetaOapg.properties.eventTypes, list, tuple, schemas.Unset] = schemas.unset,
         _configuration: typing.Optional[schemas.Configuration] = None,
         **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
     ) -> 'WebhookRepresentation':
@@ -171,10 +171,10 @@ class WebhookRepresentation(
             enabled=enabled,
             url=url,
             secret=secret,
-            created_by=created_by,
-            created_at=created_at,
+            createdBy=createdBy,
+            createdAt=createdAt,
             realm=realm,
-            event_types=event_types,
+            eventTypes=eventTypes,
             _configuration=_configuration,
             **kwargs,
         )

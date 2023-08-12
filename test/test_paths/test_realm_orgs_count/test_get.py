@@ -12,22 +12,22 @@ from unittest.mock import patch
 import urllib3
 
 import phasetwo
-from phasetwo.paths.realm_orgs_org_id_idps_import_config import post  # noqa: E501
+from phasetwo.paths.realm_orgs_count import get  # noqa: E501
 from phasetwo import configuration, schemas, api_client
 
 from .. import ApiTestMixin
 
 
-class TestRealmOrgsOrgIdIdpsImportConfig(ApiTestMixin, unittest.TestCase):
+class TestRealmOrgsCount(ApiTestMixin, unittest.TestCase):
     """
-    RealmOrgsOrgIdIdpsImportConfig unit test stubs
-        Import identity provider from uploaded JSON file  # noqa: E501
+    RealmOrgsCount unit test stubs
+        Get organizations count  # noqa: E501
     """
     _configuration = configuration.Configuration()
 
     def setUp(self):
         used_api_client = api_client.ApiClient(configuration=self._configuration)
-        self.api = post.ApiForpost(api_client=used_api_client)  # noqa: E501
+        self.api = get.ApiForget(api_client=used_api_client)  # noqa: E501
 
     def tearDown(self):
         pass

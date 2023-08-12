@@ -1,13 +1,14 @@
 <a name="__pageTop"></a>
 # phasetwo.apis.tags.organization_memberships_api.OrganizationMembershipsApi
 
-All URIs are relative to *https://app.phasetwo.io/auth/realms*
+All URIs are relative to *https://app.phasetwo.io/realms*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_organization_member**](#add_organization_member) | **put** /{realm}/orgs/{orgId}/members/{userId} | Add an organization member
 [**check_organization_membership**](#check_organization_membership) | **get** /{realm}/orgs/{orgId}/members/{userId} | Check if a user is a member of an organization
 [**get_organization_memberships**](#get_organization_memberships) | **get** /{realm}/orgs/{orgId}/members | Get organization memberships
+[**get_organization_memberships_count**](#get_organization_memberships_count) | **get** /{realm}/orgs/{orgId}/members/count | Get organization members count
 [**remove_organization_member**](#remove_organization_member) | **delete** /{realm}/orgs/{orgId}/members/{userId} | Remove an organization member
 
 # **add_organization_member**
@@ -25,10 +26,10 @@ Add the specified user to the specified organization as a member
 import phasetwo
 from phasetwo.apis.tags import organization_memberships_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -131,10 +132,10 @@ Check if a user is a member of an organization
 import phasetwo
 from phasetwo.apis.tags import organization_memberships_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -240,10 +241,10 @@ import phasetwo
 from phasetwo.apis.tags import organization_memberships_api
 from phasetwo.model.user_representation import UserRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -283,6 +284,7 @@ with phasetwo.ApiClient(configuration) as api_client:
         'orgId': "orgId_example",
     }
     query_params = {
+        'search': "search_example",
         'first': 1,
         'max': 1,
     }
@@ -312,9 +314,17 @@ skip_deserialization | bool | default is False | when True, headers and body wil
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+search | SearchSchema | | optional
 first | FirstSchema | | optional
 max | MaxSchema | | optional
 
+
+# SearchSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
 
 # FirstSchema
 
@@ -384,6 +394,114 @@ Class Name | Input Type | Accessed Type | Description | Notes
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
+# **get_organization_memberships_count**
+<a name="get_organization_memberships_count"></a>
+> int get_organization_memberships_count(realmorg_id)
+
+Get organization members count
+
+Get total number of members of a given organization
+
+### Example
+
+* Bearer Authentication (access_token):
+```python
+import phasetwo
+from phasetwo.apis.tags import organization_memberships_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
+# See configuration.py for a list of all supported configuration parameters.
+configuration = phasetwo.Configuration(
+    host = "https://app.phasetwo.io/realms"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization: access_token
+configuration = phasetwo.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+# Enter a context with an instance of the API client
+with phasetwo.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = organization_memberships_api.OrganizationMembershipsApi(api_client)
+
+    # example passing only required values which don't have defaults set
+    path_params = {
+        'realm': "realm_example",
+        'orgId': "orgId_example",
+    }
+    try:
+        # Get organization members count
+        api_response = api_instance.get_organization_memberships_count(
+            path_params=path_params,
+        )
+        pprint(api_response)
+    except phasetwo.ApiException as e:
+        print("Exception when calling OrganizationMembershipsApi->get_organization_memberships_count: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+path_params | RequestPathParams | |
+accept_content_types | typing.Tuple[str] | default is ('application/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### path_params
+#### RequestPathParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+realm | RealmSchema | | 
+orgId | OrgIdSchema | | 
+
+# RealmSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+# OrgIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#get_organization_memberships_count.ApiResponseFor200) | success
+
+#### get_organization_memberships_count.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyApplicationJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 32 bit integer
+
+### Authorization
+
+[access_token](../../../README.md#access_token)
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
 # **remove_organization_member**
 <a name="remove_organization_member"></a>
 > remove_organization_member(realmorg_iduser_id)
@@ -399,10 +517,10 @@ Remove the specified user from the specified organization as a member
 import phasetwo
 from phasetwo.apis.tags import organization_memberships_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters

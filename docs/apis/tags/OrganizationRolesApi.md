@@ -1,7 +1,7 @@
 <a name="__pageTop"></a>
 # phasetwo.apis.tags.organization_roles_api.OrganizationRolesApi
 
-All URIs are relative to *https://app.phasetwo.io/auth/realms*
+All URIs are relative to *https://app.phasetwo.io/realms*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -28,10 +28,10 @@ Check if a user has an organization role
 import phasetwo
 from phasetwo.apis.tags import organization_roles_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -144,10 +144,10 @@ import phasetwo
 from phasetwo.apis.tags import organization_roles_api
 from phasetwo.model.organization_role_representation import OrganizationRoleRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -257,10 +257,10 @@ Delete this organization role
 import phasetwo
 from phasetwo.apis.tags import organization_roles_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -364,10 +364,10 @@ import phasetwo
 from phasetwo.apis.tags import organization_roles_api
 from phasetwo.model.organization_role_representation import OrganizationRoleRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -479,10 +479,10 @@ import phasetwo
 from phasetwo.apis.tags import organization_roles_api
 from phasetwo.model.organization_role_representation import OrganizationRoleRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -591,10 +591,10 @@ import phasetwo
 from phasetwo.apis.tags import organization_roles_api
 from phasetwo.model.user_representation import UserRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -713,10 +713,10 @@ Grant the specified user to the specified organization role
 import phasetwo
 from phasetwo.apis.tags import organization_roles_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -830,10 +830,10 @@ Revoke the specified organization role from the specified user
 import phasetwo
 from phasetwo.apis.tags import organization_roles_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -946,10 +946,10 @@ import phasetwo
 from phasetwo.apis.tags import organization_roles_api
 from phasetwo.model.organization_role_representation import OrganizationRoleRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters

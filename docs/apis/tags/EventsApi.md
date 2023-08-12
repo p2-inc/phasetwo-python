@@ -1,7 +1,7 @@
 <a name="__pageTop"></a>
 # phasetwo.apis.tags.events_api.EventsApi
 
-All URIs are relative to *https://app.phasetwo.io/auth/realms*
+All URIs are relative to *https://app.phasetwo.io/realms*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -26,10 +26,10 @@ import phasetwo
 from phasetwo.apis.tags import events_api
 from phasetwo.model.event_representation import EventRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -171,10 +171,10 @@ import phasetwo
 from phasetwo.apis.tags import events_api
 from phasetwo.model.webhook_representation import WebhookRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -291,10 +291,10 @@ Delete the webhook
 import phasetwo
 from phasetwo.apis.tags import events_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -397,10 +397,10 @@ import phasetwo
 from phasetwo.apis.tags import events_api
 from phasetwo.model.webhook_representation import WebhookRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -513,10 +513,10 @@ import phasetwo
 from phasetwo.apis.tags import events_api
 from phasetwo.model.webhook_representation import WebhookRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -616,10 +616,10 @@ import phasetwo
 from phasetwo.apis.tags import events_api
 from phasetwo.model.webhook_representation import WebhookRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters

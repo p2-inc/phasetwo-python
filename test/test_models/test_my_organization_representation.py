@@ -12,12 +12,12 @@
 import unittest
 
 import phasetwo
-from phasetwo.model.realm_attribute_representation import RealmAttributeRepresentation
+from phasetwo.model.my_organization_representation import MyOrganizationRepresentation
 from phasetwo import configuration
 
 
-class TestRealmAttributeRepresentation(unittest.TestCase):
-    """RealmAttributeRepresentation unit test stubs"""
+class TestMyOrganizationRepresentation(unittest.TestCase):
+    """MyOrganizationRepresentation unit test stubs"""
     _configuration = configuration.Configuration()
 
 

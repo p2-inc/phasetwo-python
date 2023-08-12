@@ -31,6 +31,7 @@ from phasetwo.model.organization_representation import OrganizationRepresentatio
 SearchSchema = schemas.StrSchema
 FirstSchema = schemas.Int32Schema
 MaxSchema = schemas.Int32Schema
+QSchema = schemas.StrSchema
 RequestRequiredQueryParams = typing_extensions.TypedDict(
     'RequestRequiredQueryParams',
     {
@@ -42,6 +43,7 @@ RequestOptionalQueryParams = typing_extensions.TypedDict(
         'search': typing.Union[SearchSchema, str, ],
         'first': typing.Union[FirstSchema, decimal.Decimal, int, ],
         'max': typing.Union[MaxSchema, decimal.Decimal, int, ],
+        'q': typing.Union[QSchema, str, ],
     },
     total=False
 )
@@ -67,6 +69,12 @@ request_query_max = api_client.QueryParameter(
     name="max",
     style=api_client.ParameterStyle.FORM,
     schema=MaxSchema,
+    explode=True,
+)
+request_query_q = api_client.QueryParameter(
+    name="q",
+    style=api_client.ParameterStyle.FORM,
+    schema=QSchema,
     explode=True,
 )
 # Path params
@@ -220,6 +228,7 @@ class BaseApi(api_client.Api):
             request_query_search,
             request_query_first,
             request_query_max,
+            request_query_q,
         ):
             parameter_data = query_params.get(parameter.name, schemas.unset)
             if parameter_data is schemas.unset:

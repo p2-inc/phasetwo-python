@@ -1,7 +1,7 @@
 <a name="__pageTop"></a>
 # phasetwo.apis.tags.identity_providers_api.IdentityProvidersApi
 
-All URIs are relative to *https://app.phasetwo.io/auth/realms*
+All URIs are relative to *https://app.phasetwo.io/realms*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -31,10 +31,10 @@ import phasetwo
 from phasetwo.apis.tags import identity_providers_api
 from phasetwo.model.identity_provider_mapper_representation import IdentityProviderMapperRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -156,10 +156,10 @@ import phasetwo
 from phasetwo.apis.tags import identity_providers_api
 from phasetwo.model.identity_provider_representation import IdentityProviderRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -278,10 +278,10 @@ Delete the identity provider
 import phasetwo
 from phasetwo.apis.tags import identity_providers_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -384,10 +384,10 @@ Delete a mapper for the identity provider
 import phasetwo
 from phasetwo.apis.tags import identity_providers_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -500,10 +500,10 @@ import phasetwo
 from phasetwo.apis.tags import identity_providers_api
 from phasetwo.model.identity_provider_representation import IdentityProviderRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -615,10 +615,10 @@ import phasetwo
 from phasetwo.apis.tags import identity_providers_api
 from phasetwo.model.identity_provider_mapper_representation import IdentityProviderMapperRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -739,10 +739,10 @@ import phasetwo
 from phasetwo.apis.tags import identity_providers_api
 from phasetwo.model.identity_provider_mapper_representation import IdentityProviderMapperRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -860,10 +860,10 @@ import phasetwo
 from phasetwo.apis.tags import identity_providers_api
 from phasetwo.model.identity_provider_representation import IdentityProviderRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -971,10 +971,10 @@ Import identity provider from uploaded JSON file
 import phasetwo
 from phasetwo.apis.tags import identity_providers_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1042,16 +1042,16 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-2XX | [ApiResponseFor2XX](#import_idp_json.ApiResponseFor2XX) | success
+200 | [ApiResponseFor200](#import_idp_json.ApiResponseFor200) | success
 
-#### import_idp_json.ApiResponseFor2XX
+#### import_idp_json.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor2XXResponseBodyApplicationJson, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyApplicationJson, ] |  |
 headers | Unset | headers were not defined |
 
-# SchemaFor2XXResponseBodyApplicationJson
+# SchemaFor200ResponseBodyApplicationJson
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -1083,10 +1083,10 @@ import phasetwo
 from phasetwo.apis.tags import identity_providers_api
 from phasetwo.model.identity_provider_representation import IdentityProviderRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -1215,10 +1215,10 @@ import phasetwo
 from phasetwo.apis.tags import identity_providers_api
 from phasetwo.model.identity_provider_mapper_representation import IdentityProviderMapperRepresentation
 from pprint import pprint
-# Defining the host is optional and defaults to https://app.phasetwo.io/auth/realms
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
 # See configuration.py for a list of all supported configuration parameters.
 configuration = phasetwo.Configuration(
-    host = "https://app.phasetwo.io/auth/realms"
+    host = "https://app.phasetwo.io/realms"
 )
 
 # The client must configure the authentication and authorization parameters

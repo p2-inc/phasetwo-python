@@ -1,4 +1,4 @@
-# phasetwo.model.webhook_representation.WebhookRepresentation
+# phasetwo.model.my_organization_representation.MyOrganizationRepresentation
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -8,15 +8,11 @@ dict, frozendict.frozendict,  | frozendict.frozendict,  |  |
 ### Dictionary Keys
 Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
-**[attributes](#attributes)** | dict, frozendict.frozendict,  | frozendict.frozendict,  |  | [optional] 
-**id** | str,  | str,  |  | [optional] 
-**enabled** | bool,  | BoolClass,  |  | [optional] 
+**name** | str,  | str,  |  | [optional] 
+**displayName** | str,  | str,  |  | [optional] 
 **url** | str,  | str,  |  | [optional] 
-**secret** | str,  | str,  |  | [optional] 
-**createdBy** | str,  | str,  |  | [optional] 
-**createdAt** | str,  | str,  |  | [optional] 
-**realm** | str,  | str,  |  | [optional] 
-**[eventTypes](#eventTypes)** | list, tuple,  | tuple,  |  | [optional] 
+**[attributes](#attributes)** | dict, frozendict.frozendict,  | frozendict.frozendict,  |  | [optional] 
+**[roles](#roles)** | list, tuple,  | tuple,  |  | [optional] 
 **any_string_name** | dict, frozendict.frozendict, str, date, datetime, int, float, bool, decimal.Decimal, None, list, tuple, bytes, io.FileIO, io.BufferedReader | frozendict.frozendict, str, BoolClass, decimal.Decimal, NoneClass, tuple, bytes, FileIO | any string name can be used but the value must be the correct type | [optional]
 
 # attributes
@@ -26,7 +22,24 @@ Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
 
-# eventTypes
+### Dictionary Keys
+Key | Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | ------------- | -------------
+**[any_string_name](#any_string_name)** | list, tuple,  | tuple,  | any string name can be used but the value must be the correct type | [optional] 
+
+# any_string_name
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+items | str,  | str,  |  | 
+
+# roles
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
