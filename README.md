@@ -6,7 +6,7 @@ The Phase Two Python SDK library provides access to the Phase Two API for server
 
 ## Documentation
 
-See the [API Reference](https://phasetwo.io/api/) and [PyPI](https://pypi.org/project/phasetwo-sdk/).
+See the [API Reference](https://phasetwo.io/api/phase-two-admin-rest-api)
 
 ## Installation
 
@@ -49,11 +49,11 @@ try:
 except phasetwo.ApiException as e:
     print("Exception when calling AttributesApi->create_realm_attribute: %s\n" % e)
 
-# Create an Organization
+# Create an Organization - TODO
 
-# Create an Admin Portal link for the Organization
+# Create an Admin Portal link for the Organization - TODO
 
-# Create and publish an Audit Event
+# Create and publish an Audit Event - TODO
 
 ```
 
