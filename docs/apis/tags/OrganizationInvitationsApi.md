@@ -56,6 +56,9 @@ with phasetwo.ApiClient(configuration) as api_client:
         roles=[
             "roles_example"
         ],
+        attributes=dict(
+,
+        ),
     )
     try:
         # Create an invitation to an organization
