@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**get_idp_mappers**](#get_idp_mappers) | **get** /{realm}/orgs/{orgId}/idps/{alias}/mappers | Get mappers for identity provider
 [**get_idps**](#get_idps) | **get** /{realm}/orgs/{orgId}/idps | Get identity providers for this organization
 [**import_idp_json**](#import_idp_json) | **post** /{realm}/orgs/{orgId}/idps/import-config | Import identity provider from uploaded JSON file
+[**link_idp**](#link_idp) | **post** /{realm}/orgs/{orgId}/idps/link | Link an existing identity provider to this organization
 [**update_idp**](#update_idp) | **put** /{realm}/orgs/{orgId}/idps/{alias} | Update identity provider for this organization by alias
 [**update_idp_mapper**](#update_idp_mapper) | **put** /{realm}/orgs/{orgId}/idps/{alias}/mappers/{id} | Update a mapper for the identity provider
 
@@ -1062,6 +1063,120 @@ dict, frozendict.frozendict,  | frozendict.frozendict,  |  |
 Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
 **any_string_name** | dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader,  | frozendict.frozendict, str, decimal.Decimal, BoolClass, NoneClass, tuple, bytes, FileIO | any string name can be used but the value must be the correct type | [optional]
+
+### Authorization
+
+[access_token](../../../README.md#access_token)
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **link_idp**
+<a name="link_idp"></a>
+> link_idp(realmorg_idlink_identity_provider_representation)
+
+Link an existing identity provider to this organization
+
+### Example
+
+* Bearer Authentication (access_token):
+```python
+import phasetwo
+from phasetwo.apis.tags import identity_providers_api
+from phasetwo.model.link_identity_provider_representation import LinkIdentityProviderRepresentation
+from pprint import pprint
+# Defining the host is optional and defaults to https://app.phasetwo.io/realms
+# See configuration.py for a list of all supported configuration parameters.
+configuration = phasetwo.Configuration(
+    host = "https://app.phasetwo.io/realms"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization: access_token
+configuration = phasetwo.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+# Enter a context with an instance of the API client
+with phasetwo.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = identity_providers_api.IdentityProvidersApi(api_client)
+
+    # example passing only required values which don't have defaults set
+    path_params = {
+        'realm': "realm_example",
+        'orgId': "orgId_example",
+    }
+    body = LinkIdentityProviderRepresentation(
+        alias="alias_example",
+        post_broker_flow="post_broker_flow_example",
+        sync_mode="sync_mode_example",
+    )
+    try:
+        # Link an existing identity provider to this organization
+        api_response = api_instance.link_idp(
+            path_params=path_params,
+            body=body,
+        )
+    except phasetwo.ApiException as e:
+        print("Exception when calling IdentityProvidersApi->link_idp: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+body | typing.Union[SchemaForRequestBodyApplicationJson] | required |
+path_params | RequestPathParams | |
+content_type | str | optional, default is 'application/json' | Selects the schema and serialization of the request body
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### body
+
+# SchemaForRequestBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**LinkIdentityProviderRepresentation**](../../models/LinkIdentityProviderRepresentation.md) |  | 
+
+
+### path_params
+#### RequestPathParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+realm | RealmSchema | | 
+orgId | OrgIdSchema | | 
+
+# RealmSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+# OrgIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+201 | [ApiResponseFor201](#link_idp.ApiResponseFor201) | success
+
+#### link_idp.ApiResponseFor201
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | Unset | body was not defined |
+headers | Unset | headers were not defined |
 
 ### Authorization
 

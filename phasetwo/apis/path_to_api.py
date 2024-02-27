@@ -14,12 +14,14 @@ from phasetwo.apis.paths.realm_orgs_org_id_domains_domain_name_verify import Rea
 from phasetwo.apis.paths.realm_orgs_org_id_members_user_id import RealmOrgsOrgIdMembersUserId
 from phasetwo.apis.paths.realm_orgs_org_id_invitations import RealmOrgsOrgIdInvitations
 from phasetwo.apis.paths.realm_orgs_org_id_invitations_invitation_id import RealmOrgsOrgIdInvitationsInvitationId
+from phasetwo.apis.paths.realm_orgs_org_id_invitations_invitation_id_resend_email import RealmOrgsOrgIdInvitationsInvitationIdResendEmail
 from phasetwo.apis.paths.realm_orgs_org_id_roles import RealmOrgsOrgIdRoles
 from phasetwo.apis.paths.realm_orgs_org_id_roles_name import RealmOrgsOrgIdRolesName
 from phasetwo.apis.paths.realm_orgs_org_id_roles_name_users import RealmOrgsOrgIdRolesNameUsers
 from phasetwo.apis.paths.realm_orgs_org_id_roles_name_users_user_id import RealmOrgsOrgIdRolesNameUsersUserId
 from phasetwo.apis.paths.realm_orgs_org_id_idps_import_config import RealmOrgsOrgIdIdpsImportConfig
 from phasetwo.apis.paths.realm_orgs_org_id_idps import RealmOrgsOrgIdIdps
+from phasetwo.apis.paths.realm_orgs_org_id_idps_link import RealmOrgsOrgIdIdpsLink
 from phasetwo.apis.paths.realm_orgs_org_id_idps_alias import RealmOrgsOrgIdIdpsAlias
 from phasetwo.apis.paths.realm_orgs_org_id_idps_alias_mappers import RealmOrgsOrgIdIdpsAliasMappers
 from phasetwo.apis.paths.realm_orgs_org_id_idps_alias_mappers_id import RealmOrgsOrgIdIdpsAliasMappersId
@@ -48,12 +50,14 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.REALM_ORGS_ORG_ID_MEMBERS_USER_ID: RealmOrgsOrgIdMembersUserId,
         PathValues.REALM_ORGS_ORG_ID_INVITATIONS: RealmOrgsOrgIdInvitations,
         PathValues.REALM_ORGS_ORG_ID_INVITATIONS_INVITATION_ID: RealmOrgsOrgIdInvitationsInvitationId,
+        PathValues.REALM_ORGS_ORG_ID_INVITATIONS_INVITATION_ID_RESENDEMAIL: RealmOrgsOrgIdInvitationsInvitationIdResendEmail,
         PathValues.REALM_ORGS_ORG_ID_ROLES: RealmOrgsOrgIdRoles,
         PathValues.REALM_ORGS_ORG_ID_ROLES_NAME: RealmOrgsOrgIdRolesName,
         PathValues.REALM_ORGS_ORG_ID_ROLES_NAME_USERS: RealmOrgsOrgIdRolesNameUsers,
         PathValues.REALM_ORGS_ORG_ID_ROLES_NAME_USERS_USER_ID: RealmOrgsOrgIdRolesNameUsersUserId,
         PathValues.REALM_ORGS_ORG_ID_IDPS_IMPORTCONFIG: RealmOrgsOrgIdIdpsImportConfig,
         PathValues.REALM_ORGS_ORG_ID_IDPS: RealmOrgsOrgIdIdps,
+        PathValues.REALM_ORGS_ORG_ID_IDPS_LINK: RealmOrgsOrgIdIdpsLink,
         PathValues.REALM_ORGS_ORG_ID_IDPS_ALIAS: RealmOrgsOrgIdIdpsAlias,
         PathValues.REALM_ORGS_ORG_ID_IDPS_ALIAS_MAPPERS: RealmOrgsOrgIdIdpsAliasMappers,
         PathValues.REALM_ORGS_ORG_ID_IDPS_ALIAS_MAPPERS_ID: RealmOrgsOrgIdIdpsAliasMappersId,
@@ -83,12 +87,14 @@ path_to_api = PathToApi(
         PathValues.REALM_ORGS_ORG_ID_MEMBERS_USER_ID: RealmOrgsOrgIdMembersUserId,
         PathValues.REALM_ORGS_ORG_ID_INVITATIONS: RealmOrgsOrgIdInvitations,
         PathValues.REALM_ORGS_ORG_ID_INVITATIONS_INVITATION_ID: RealmOrgsOrgIdInvitationsInvitationId,
+        PathValues.REALM_ORGS_ORG_ID_INVITATIONS_INVITATION_ID_RESENDEMAIL: RealmOrgsOrgIdInvitationsInvitationIdResendEmail,
         PathValues.REALM_ORGS_ORG_ID_ROLES: RealmOrgsOrgIdRoles,
         PathValues.REALM_ORGS_ORG_ID_ROLES_NAME: RealmOrgsOrgIdRolesName,
         PathValues.REALM_ORGS_ORG_ID_ROLES_NAME_USERS: RealmOrgsOrgIdRolesNameUsers,
         PathValues.REALM_ORGS_ORG_ID_ROLES_NAME_USERS_USER_ID: RealmOrgsOrgIdRolesNameUsersUserId,
         PathValues.REALM_ORGS_ORG_ID_IDPS_IMPORTCONFIG: RealmOrgsOrgIdIdpsImportConfig,
         PathValues.REALM_ORGS_ORG_ID_IDPS: RealmOrgsOrgIdIdps,
+        PathValues.REALM_ORGS_ORG_ID_IDPS_LINK: RealmOrgsOrgIdIdpsLink,
         PathValues.REALM_ORGS_ORG_ID_IDPS_ALIAS: RealmOrgsOrgIdIdpsAlias,
         PathValues.REALM_ORGS_ORG_ID_IDPS_ALIAS_MAPPERS: RealmOrgsOrgIdIdpsAliasMappers,
         PathValues.REALM_ORGS_ORG_ID_IDPS_ALIAS_MAPPERS_ID: RealmOrgsOrgIdIdpsAliasMappersId,

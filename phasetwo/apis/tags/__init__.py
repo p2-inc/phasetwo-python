@@ -10,6 +10,7 @@ class TagValues(str, enum.Enum):
     EVENTS = "Events"
     IDENTITY_PROVIDERS = "Identity Providers"
     ORGANIZATION_DOMAINS = "Organization Domains"
+    ORGANIZATION_INVITATION = "Organization Invitation"
     ORGANIZATION_INVITATIONS = "Organization Invitations"
     ORGANIZATION_MEMBERSHIPS = "Organization Memberships"
     ORGANIZATION_ROLES = "Organization Roles"
