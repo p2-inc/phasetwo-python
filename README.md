@@ -1,6 +1,4 @@
-> :bug: **This is alpha software**
-
-# Python SDK for Phase Two API
+# Phase Two Python SDK
 
 <!-- phasetwo:banner:start - managed by p2-inc/shared-github-actions, edit there -->
 [![license](https://img.shields.io/badge/license-Apache--2.0-blue)](COPYING) [![docs](https://img.shields.io/badge/docs-phasetwo.io-blue)](https://phasetwo.io/docs/api/sdks/)
@@ -22,6 +20,9 @@
 <!-- phasetwo:banner:end -->
 
 The Phase Two Python SDK library provides access to the Phase Two API for server-side Python applications.
+
+> [!NOTE]
+> Pre-1.0: minor versions can contain breaking changes, which come from changes to the API spec. Pin a version.
 
 ## Documentation
 
@@ -81,6 +82,6 @@ The API classes and models in `phasetwo/openapi` are generated from the [Phase T
 
 To build: `uv build`
 
----
+## License
 
-All documentation, source code and other files in this repository are Copyright 2022 Phase Two, Inc.
+Apache License 2.0, see [COPYING](COPYING).
