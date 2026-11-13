@@ -1,9 +1,9 @@
-# On each merge to main, publish the next version of phasetwo-sdk to PyPI: a minor
-# bump if the merged PR is labelled semver:minor (set by phasetwo-sdk-generator for
-# breaking spec changes), otherwise a patch bump of the version currently on PyPI.
-# The first release (nothing on PyPI yet) uses the version in pyproject.toml. The
-# release is tagged vX.Y.Z; pyproject.toml's version in git isn't updated.
-# Skip with [ci skip] in the commit message.
+# On each merge to main, publish the next version of phasetwo-sdk to PyPI.
+# Versions follow the API version in sdk-generator.json (the spec's info.version),
+# shared by all Phase Two SDKs: the first release for API X.Y is X.Y.0, and later
+# releases (e.g. SDK-only fixes) are X.Y.1, X.Y.2, ... based on this repo's tags.
+# The version is set at build time and tagged vX.Y.Z; pyproject.toml's version in
+# git isn't updated. Skip with [ci skip] in the commit message.
 #
 # Uses PyPI trusted publishing: add this repo, workflow (release.yml) and
 # environment (pypi) as a trusted publisher for phasetwo-sdk on pypi.org.
@@ -26,29 +26,21 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: read
     outputs:
       next: ${{ steps.version.outputs.next }}
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: astral-sh/setup-uv@v10.3.3
       - name: Choose version
         id: version
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
-          current=$(curl -fsS https://pypi.org/pypi/phasetwo-sdk/json | jq -r .info.version || true)
-          if [ -z "$current" ]; then
-            next=$(uv version --short)
-          else
-            IFS=. read -r major minor patch <<< "$current"
-            labels=$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA/pulls" --jq '.[0].labels[].name' 2>/dev/null || true)
-            if grep -qx 'semver:minor' <<< "$labels"; then
-              next="$major.$((minor + 1)).0"
-            else
-              next="$major.$minor.$((patch + 1))"
-            fi
-          fi
+          api=$(sed -n 's/.*"apiVersion": *"\([^"]*\)".*/\1/p' sdk-generator.json)
+          [ -n "$api" ] || { echo "::error::no apiVersion in sdk-generator.json"; exit 1; }
+          mm=${api%.*}
+          last=$(git tag --list "v$mm.*" --sort=-v:refname | head -1)
+          if [ -z "$last" ]; then next="$mm.0"; else next="$mm.$(( ${last##*.} + 1 ))"; fi
           echo "next=$next" >> "$GITHUB_OUTPUT"
       - run: uv version "${{ steps.version.outputs.next }}"
       - run: uv build

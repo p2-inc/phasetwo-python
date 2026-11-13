@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "phasetwo-sdk"
-version = "0.3.0"
+version = "0.2.0"
 description = "Python client for the Phase Two Admin REST API (organizations, SSO, webhooks and more for Keycloak)"
 readme = "README.md"
 license = "Apache-2.0"
