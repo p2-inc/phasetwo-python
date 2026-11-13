@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "phasetwo-sdk"
+version = "0.2.0"
+description = "Python client for the Phase Two Admin REST API (organizations, SSO, webhooks and more for Keycloak)"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["COPYING"]
+authors = [{ name = "Phase Two, Inc.", email = "support@phasetwo.io" }]
+keywords = ["phasetwo", "keycloak", "organizations", "sso", "openapi"]
+requires-python = ">=3.11"
+# Keep in step with what the generator's own pyproject.toml asks for
+# (.work/build/python/out/pyproject.toml in phasetwo-sdk-generator).
+dependencies = [
+  "urllib3>=2.7.0,<3.0.0",
+  "python-dateutil>=2.8.2",
+  "pydantic>=2.11",
+  "typing-extensions>=4.7.1",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://phasetwo.io/docs/api/sdks/"
+Repository = "https://github.com/p2-inc/phasetwo-python"
+Issues = "https://github.com/p2-inc/phasetwo-python/issues"
+"API reference" = "https://phasetwo.io/api/phase-two-admin-rest-api"
+
+[tool.hatch.build.targets.wheel]
+packages = ["phasetwo"]
+
+[dependency-groups]
+dev = ["pytest>=8", "mypy>=1.10"]
