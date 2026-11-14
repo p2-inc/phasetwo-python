@@ -1,7 +1,7 @@
 # Phase Two Python SDK
 
 <!-- phasetwo:banner:start - managed by p2-inc/shared-github-actions, edit there -->
-[![PyPI](https://img.shields.io/pypi/v/phasetwo-sdk)](https://pypi.org/project/phasetwo-sdk/) [![license](https://img.shields.io/badge/license-Apache--2.0-blue)](COPYING) [![docs](https://img.shields.io/badge/docs-phasetwo.io-blue)](https://phasetwo.io/docs/api/sdks/)
+[![build](https://img.shields.io/github/actions/workflow/status/p2-inc/phasetwo-python/ci.yml?branch=main&label=build)](https://github.com/p2-inc/phasetwo-python/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/phasetwo-sdk)](https://pypi.org/project/phasetwo-sdk/) [![license](https://img.shields.io/badge/license-Apache--2.0-blue)](COPYING) [![docs](https://img.shields.io/badge/docs-phasetwo.io-blue)](https://phasetwo.io/docs/api/sdks/)
 
 📚 [Documentation](https://phasetwo.io/docs/api/sdks/) • 🚀 [Hosted Keycloak](https://dash.phasetwo.io/?utm_source=github&utm_medium=readme&utm_campaign=phasetwo-python) • 🤖 [Keycloak Skills](https://github.com/p2-inc/keycloak-skills) • 💬 [Support](mailto:support@phasetwo.io)
 
